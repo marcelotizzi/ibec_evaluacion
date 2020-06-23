@@ -1,0 +1,12 @@
+Parte 1
+-------
+1a: hay una imagen que se llama '1a-diagrama' donde esta lo pedido para este punto.
+
+1b y c: Comandos SQL
+El archivo .sql se llama 'ibec_bd'
+ahi se encutran todo el sql de la base de datos, el DDL y DML, junto con los triggers y procedimientos.
+
+Debido a que en MYSQL no se puede hacer multiples eventos en un mismo 
+trigger (ej: CREATE TRIGGER AFETER INSERT OR UPDATE OR DELETE ON STOCK...) como en Postgres
+hice un trigger por evento y llame a un Procedimiento para no repetir codigo.
+

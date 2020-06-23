@@ -1,0 +1,45 @@
+Parte 2
+-------
+
+API REST PHP (Laravel)
+Version Usada:
+Laravel Framework 7.16.1
+
+Nota: En el archivo .env Para cambiar los datos de la base de datos en mi caso la bd es 'ibec_bd'.
+
+
+Rutas:
+Ejemplo URL el formato:
+http://localhost:8000/api/clientes
+http://localhost:8000/api/productos
+http://localhost:8000/api/stock
+
++--------+-----------+------------------------+---------------+------------------------------------------------+------------+
+| Domain | Method    | URI                    | Name          | Action                                         | Middleware |
++--------+-----------+------------------------+---------------+------------------------------------------------+------------+
+|        | GET|HEAD  | api/clientes           |               | App\Http\Controllers\ClientesController@index  | api        |
+|        | GET|HEAD  | api/productos          |               | App\Http\Controllers\ProductosController@index | api        |
+|        | GET|HEAD  | api/stock              | stock.index   | App\Http\Controllers\StockController@index     | api        |
+|        | POST      | api/stock              | stock.store   | App\Http\Controllers\StockController@store     | api        |
+|        | GET|HEAD  | api/stock/create       | stock.create  | App\Http\Controllers\StockController@create    | api        |
+|        | GET|HEAD  | api/stock/{stock}      | stock.show    | App\Http\Controllers\StockController@show      | api        |
+|        | PUT|PATCH | api/stock/{stock}      | stock.update  | App\Http\Controllers\StockController@update    | api        |
+|        | DELETE    | api/stock/{stock}      | stock.destroy | App\Http\Controllers\StockController@destroy   | api        |
+|        | GET|HEAD  | api/stock/{stock}/edit | stock.edit    | App\Http\Controllers\StockController@edit      | api        |
++--------+-----------+------------------------+---------------+------------------------------------------------+------------+
+
+Para probar los datos por POSTMAN
+
+Listar todo el stock (Method GET) -> http://localhost:8000/api/stock
+
+Obtencion por Id: (Method GET) trae el stock con id=1 -> http://localhost:8000/api/stock/1
+
+Alta stock: (Method POST)-> http://localhost:8000/api/stock/
+para ingresar los datos en el body hay que usar el formato: x-www-form-urlencoded
+
+Modificacion stock: (Method PUT) actualizo el stock con id 1 ->http://localhost:8000/api/stock/1
+para actulizar los datos en el body hay que usar el formato: x-www-form-urlencoded
+
+Baja stock: (Method DELETE) borro el stock con id=1 -> http://localhost:8000/api/stock/1
+
+Iniciar servicio: php artisan serve

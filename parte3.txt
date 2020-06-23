@@ -1,0 +1,19 @@
+Parte 3
+-------
+Realizado en React JS
+Version: 16.13.1
+
+En la carpeta services en el archivo 'api.js'
+se encutran todas las llamadas a la api.
+
+Dependencias usadas:
+
+- React Router
+- React Bootstrap
+
+Nota: En caso de que no reconosca alguna de estas dependecias usar los comandos:
+ npm install --save react-router-dom
+ npm install --save react-bootstrap bootstrap
+ 
+ 
+ Iniciar servicio: npm start
